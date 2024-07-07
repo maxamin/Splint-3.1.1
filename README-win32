@@ -1,0 +1,38 @@
+1. Modifications
+If you want to build splint-3.1.1 in win32 platform based on the splint-3.1.1.src.tgz,the following
+steps shoud be done.
+1) winconfig.h
+   Copy it from splint-3.0.1.6-2.win32.zip package, and replace 3.0.1.6 with 3.1.1.
+
+2) flag_codes.gen
+   Copy it from splint-3.0.1.6-2.win32.zip package, and add some new flags in version 3.1.1.
+
+3) cscanner.c
+   Find the line "#include <unistd.h>", and replace it with:
+   # ifndef WIN32
+   #include <unistd.h>
+   # endif
+
+   These steps has been finished in this package. 
+
+2. Project:
+   The project file is in the directory of .\splint\win32: SPLINT.DSW.
+   It can be opened with Microsoft Visual C++ 6.0.
+   In addtion to the default settings, you should add ..\src\Headers
+   to include files directory.
+   Note: To use the file version.h in ..\src\Headers, you should
+         ensure that ..\src\Headers directory is at the top of include
+         files directories, or there may be an error.
+  
+
+3. The generated splint.exe lies in the directory .\splint\bin.
+
+Good luck to you all.
+
+
+
+                                            ZhouJun
+                                            May 28, 2003
+                                            Email:zhou.jun_xj@zte.com.cn
+                                                  j.zhou@mail.china.com
+
