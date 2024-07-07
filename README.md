@@ -61,6 +61,7 @@ Alternatively, you can clone the repository to get the latest version:
 
 ```bash
 git clone https://github.com/maxamin/Splint-3.1.1.git
+
 ## Use Cases in Education
 
 ### 1. **Learning Compiler Fundamentals**
